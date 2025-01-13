@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: microservice-commande
+    name: commande-service
   datasource:
     url: jdbc:mysql://localhost:3306/commande?useSSL=false
     username: root

@@ -1,21 +1,25 @@
 server:
-  port: 8765
+  port: 8889
 
 spring:
   application:
     name: gateway-service
+  cloud:
+    gateway:
+      routes:
+        - id: commande-service
+          uri: lb://COMMANDE-SERVICE
+          predicates:
+            - Path=/commande/**
+        - id: produit-service
+          uri: lb://PRODUIT-SERVICE
+          predicates:
+            - Path=/produit/**
 
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka/
 
-zuul:
-  routes:
-    produit-service:
-      path: /produits/**
-      service-id: produit-service
-    commande-service:
-      path: /commandes/**
-      service-id: commande-service
+
 

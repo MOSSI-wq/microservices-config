@@ -9,5 +9,5 @@ eureka:
   instance:
     prefer-ip-address: true
   client:
-    register-with-eureka: false  # Un serveur Eureka ne s'enregistre généralement pas lui-même
+    register-with-eureka: false
     fetch-registry: false

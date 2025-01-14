@@ -5,15 +5,6 @@ spring:
   application:
     name: gateway-service
 
-zuul:
-  prefix: /api
-  routes:
-    commande:
-      path: /commande/**
-      serviceId: commande-service
-    produit:
-      path: /produit/**
-      serviceId: produit-service
 ribbon:
   eureka:
     enabled: true
@@ -21,5 +12,5 @@ ribbon:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8080/eureka/
+      defaultZone: http://localhost:9001/eureka/
     registerWithEureka: true

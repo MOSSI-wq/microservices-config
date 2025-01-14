@@ -4,6 +4,20 @@ server:
 spring:
   application:
     name: gateway-service
+
+zuul:
+  prefix: /api
+  routes:
+    commande:
+      path: /commande/**
+      serviceId: commande-service
+    produit:
+      path: /produit/**
+      serviceId: produit-service
+ribbon:
+  eureka:
+    enabled: true
+
 eureka:
   client:
     serviceUrl:

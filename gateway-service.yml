@@ -11,7 +11,7 @@ zuul:
     commande:
       path: /commande/**
       serviceId: commande-service
-     produit:
+    produit:
       path: /produit/**
       serviceId: produit-service
 ribbon:

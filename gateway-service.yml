@@ -10,11 +10,3 @@ eureka:
     service-url:
       defaultZone: http://localhost:8080/eureka/
 
-zuul:
-  routes:
-    produit-service:
-      path: /produits/**
-      service-id: produit-service
-    commande-service:
-      path: /commandes/**
-      service-id: commande-service

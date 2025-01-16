@@ -9,9 +9,8 @@ zuul:
     orders:
       path: /produit/**
       service-id: produit-service
-ribbon:
-  eureka:
-    enabled: true
+ribbon. ReadTimeout: 60000
+ribbon.ConnectTimeout: 60000
 
 eureka:
   client:

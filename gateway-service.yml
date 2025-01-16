@@ -1,17 +1,6 @@
 server:
   port: 8889
 
-zuul:
-  routes:
-    commandes:
-      path: /commande/**
-      service-id: commande-service
-    produit:
-      path: /produit/**
-      service-id: produit-service
-ribbon:
-  eureka:
-    enabled: true
 eureka:
   client:
     serviceUrl:

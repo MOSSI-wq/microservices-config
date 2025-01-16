@@ -1,17 +1,6 @@
 server:
   port: 8889
 
-zuul:
-  routes:
-    users:
-      path: /commande/**
-      service-id: commande-service
-    orders:
-      path: /produit/**
-      service-id: produit-service
-ribbon:
-  ReadTimeout: 60000
-  ConnectTimeout: 60000
 
 eureka:
   client:

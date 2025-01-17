@@ -9,3 +9,8 @@ eureka:
   client:
     register-with-eureka: false
     fetch-registry: false
+    
+logging:
+  level:
+    com.netflix.discovery: DEBUG  # Active les logs détaillés pour Eureka Discovery Client
+    com.netflix.discovery.DiscoveryClient: TRACE  # Active les logs les plus détaillés pour DiscoveryClient

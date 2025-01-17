@@ -14,9 +14,7 @@ spring:
           uri: lb://PRODUIT-SERVICE
           predicates:
             - Path=/produits/**
-
 eureka:
   client:
-    serviceUrl:
+    service-url:
       defaultZone: http://localhost:9001/eureka/
-    registerWithEureka: true

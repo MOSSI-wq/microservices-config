@@ -1,5 +1,19 @@
 server:
   port: 8889
+  
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: commande-service
+          uri: lb://COMMANDE-SERVICE
+          predicates:
+            - Path=/commandes/**
+          
+        - id: produit-service
+          uri: lb://PRODUIT-SERVICE
+          predicates:
+            - Path=/produits/**
 
 eureka:
   client:
